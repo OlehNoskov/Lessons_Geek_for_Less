@@ -1,4 +1,4 @@
-package com.example.geek_for_less.patterns.builder.builder;
+package com.example.geek_for_less.patterns.builder.builder_first_example;
 
 public class Main {
     public static void main(String[] args) {
