@@ -25,7 +25,6 @@ public class Demo {
         Car car = builder.getResult();
         System.out.println("Car built:\n" + car.getCarType());
 
-
         CarManualBuilder manualBuilder = new CarManualBuilder();
 
         // Директор может знать больше одного рецепта строительства.

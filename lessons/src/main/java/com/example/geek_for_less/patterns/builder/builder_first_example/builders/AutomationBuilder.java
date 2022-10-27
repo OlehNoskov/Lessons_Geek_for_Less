@@ -1,4 +1,6 @@
-package com.example.geek_for_less.patterns.builder.builder_first_example;
+package com.example.geek_for_less.patterns.builder.builder_first_example.builders;
+
+import com.example.geek_for_less.patterns.builder.builder_first_example.BuildMain;
 
 public class AutomationBuilder implements Builder {
     private int id;

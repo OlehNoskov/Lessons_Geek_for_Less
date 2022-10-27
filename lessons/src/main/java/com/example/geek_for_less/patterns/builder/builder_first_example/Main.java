@@ -1,5 +1,8 @@
 package com.example.geek_for_less.patterns.builder.builder_first_example;
 
+import com.example.geek_for_less.patterns.builder.builder_first_example.builders.AutomationBuilder;
+import com.example.geek_for_less.patterns.builder.builder_first_example.builders.ManualBuilder;
+
 public class Main {
     public static void main(String[] args) {
         Manager manager = new Manager();

@@ -1,5 +1,7 @@
 package com.example.geek_for_less.patterns.builder.builder_first_example;
 
+import com.example.geek_for_less.patterns.builder.builder_first_example.builders.Builder;
+
 public class Manager {
 
     public void constructorAutoBuild(Builder builder){
