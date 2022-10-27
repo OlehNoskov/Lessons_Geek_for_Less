@@ -1,4 +1,4 @@
-package com.example.geek_for_less.patterns.builder;
+package com.example.geek_for_less.patterns.singleton;
 
 public enum SingletonEnum {
     ENCRYPTOR {
