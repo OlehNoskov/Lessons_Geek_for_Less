@@ -1,6 +1,6 @@
 package com.example.geek_for_less.facade;
 
-import com.example.geek_for_less.patterns.facade.DbAccessFacade;
+import com.example.geek_for_less.patterns.facade.DbAccessServiceFacade;
 import com.example.geek_for_less.patterns.facade.DbAccessService;
 import com.example.geek_for_less.patterns.facade.service.DbConnectionService;
 import com.example.geek_for_less.patterns.facade.service.DbServiceConnectionMySql;
@@ -24,7 +24,7 @@ public class FacadeTest {
         SQLQueryService sqlQueryService = new SQLServiceGeneric();
         DbConnectionService dbConnectionService = new DbServiceConnectionMySql();
 
-        DbAccessService dbAccessService = new DbAccessFacade(sqlQueryService, dbConnectionService);
+        DbAccessService dbAccessService = new DbAccessServiceFacade(sqlQueryService, dbConnectionService);
         String result = dbAccessService.userById(ID);
         assertEquals(EXPECTED_RESULT, result);
     }
@@ -39,7 +39,7 @@ public class FacadeTest {
 
         // end of complex object initialization
 
-        DbAccessService dbAccessService = new DbAccessFacade(sqlQueryService, dbConnectionService);
+        DbAccessService dbAccessService = new DbAccessServiceFacade(sqlQueryService, dbConnectionService);
         String result = dbAccessService.userById(ID);
         verify(dbConnectionService, times(1)).invokeSql(eq("SELECT * FROM users WHERE id = randomId"));
     }

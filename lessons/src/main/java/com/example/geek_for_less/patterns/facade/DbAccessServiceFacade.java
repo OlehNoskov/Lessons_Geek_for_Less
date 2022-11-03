@@ -3,11 +3,11 @@ package com.example.geek_for_less.patterns.facade;
 import com.example.geek_for_less.patterns.facade.service.DbConnectionService;
 import com.example.geek_for_less.patterns.proxy.service.SQLQueryService;
 
-public class DbAccessFacade implements DbAccessService {
+public class DbAccessServiceFacade implements DbAccessService {
     private SQLQueryService sqlQueryService;
     private DbConnectionService dbConnectionService;
 
-    public DbAccessFacade(SQLQueryService sqlQueryService, DbConnectionService dbConnectionService) {
+    public DbAccessServiceFacade(SQLQueryService sqlQueryService, DbConnectionService dbConnectionService) {
         this.sqlQueryService = sqlQueryService;
         this.dbConnectionService = dbConnectionService;
     }
