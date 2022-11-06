@@ -4,4 +4,8 @@ public class Test {
     public static void main(String[] args) {
         System.out.println("TEXT!!!");
     }
+
+    public static void show(){
+        System.out.println("TEXT 2 !!!");
+    }
 }
