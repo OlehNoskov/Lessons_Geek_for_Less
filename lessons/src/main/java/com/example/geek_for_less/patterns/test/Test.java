@@ -8,4 +8,8 @@ public class Test {
     public static void show(){
         System.out.println("TEXT 2 !!!");
     }
+
+    public static void show2(){
+        System.out.println("TEXT 3 !!!");
+    }
 }
