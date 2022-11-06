@@ -11,5 +11,7 @@ public class Test {
 
     public static void show2(){
         System.out.println("TEXT 3 !!!");
+        System.out.println("TEXT 4 !!!");
+        System.out.println("TEXT 5 !!!");
     }
 }
