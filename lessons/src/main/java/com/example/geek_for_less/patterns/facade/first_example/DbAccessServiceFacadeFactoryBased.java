@@ -1,11 +1,9 @@
-package com.example.geek_for_less.patterns.facade;
+package com.example.geek_for_less.patterns.facade.first_example;
 
-import com.example.geek_for_less.patterns.facade.service.DbConnectionService;
-import com.example.geek_for_less.patterns.facade.service.DbServiceConnectionMySql;
+import com.example.geek_for_less.patterns.facade.first_example.service.DbConnectionService;
 import com.example.geek_for_less.patterns.factory.AbstractFactory;
 import com.example.geek_for_less.patterns.factory.DbAccessFactory;
 import com.example.geek_for_less.patterns.proxy.service.SQLQueryService;
-import com.example.geek_for_less.patterns.proxy.service.SQLServiceGeneric;
 
 /**
  * Create facade via DbAccessFactoryDefault in the constructor

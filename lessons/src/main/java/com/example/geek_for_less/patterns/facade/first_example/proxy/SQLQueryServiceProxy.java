@@ -1,4 +1,4 @@
-package com.example.geek_for_less.patterns.facade.proxy;
+package com.example.geek_for_less.patterns.facade.first_example.proxy;
 
 import com.example.geek_for_less.patterns.proxy.service.SQLQueryService;
 

@@ -1,9 +1,9 @@
 package com.example.geek_for_less.facade;
 
-import com.example.geek_for_less.patterns.facade.DbAccessServiceFacade;
-import com.example.geek_for_less.patterns.facade.DbAccessService;
-import com.example.geek_for_less.patterns.facade.service.DbConnectionService;
-import com.example.geek_for_less.patterns.facade.service.DbServiceConnectionMySql;
+import com.example.geek_for_less.patterns.facade.first_example.DbAccessServiceFacade;
+import com.example.geek_for_less.patterns.facade.first_example.DbAccessService;
+import com.example.geek_for_less.patterns.facade.first_example.service.DbConnectionService;
+import com.example.geek_for_less.patterns.facade.first_example.service.DbServiceConnectionMySql;
 import com.example.geek_for_less.patterns.proxy.service.SQLQueryService;
 import com.example.geek_for_less.patterns.proxy.service.SQLServiceGeneric;
 

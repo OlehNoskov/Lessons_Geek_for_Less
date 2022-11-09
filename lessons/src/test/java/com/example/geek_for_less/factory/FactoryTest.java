@@ -1,7 +1,7 @@
 package com.example.geek_for_less.factory;
 
-import com.example.geek_for_less.patterns.facade.DbAccessService;
-import com.example.geek_for_less.patterns.facade.DbAccessServiceFacadeFactoryBased;
+import com.example.geek_for_less.patterns.facade.first_example.DbAccessService;
+import com.example.geek_for_less.patterns.facade.first_example.DbAccessServiceFacadeFactoryBased;
 import com.example.geek_for_less.patterns.factory.AbstractFactory;
 import com.example.geek_for_less.patterns.factory.DbAccessFactory;
 import com.example.geek_for_less.patterns.factory.DbAccessFactoryDefault;
