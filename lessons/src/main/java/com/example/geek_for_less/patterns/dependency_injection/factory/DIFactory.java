@@ -1,8 +1,8 @@
-package com.example.geek_for_less.dependency_injection.factory;
+package com.example.geek_for_less.patterns.dependency_injection.factory;
 
-import com.example.geek_for_less.dependency_injection.service.DBIntegrationService;
-import com.example.geek_for_less.dependency_injection.service.FileIntegrationService;
-import com.example.geek_for_less.dependency_injection.service.FileIntegrationServiceImpl;
+import com.example.geek_for_less.patterns.dependency_injection.service.DBIntegrationService;
+import com.example.geek_for_less.patterns.dependency_injection.service.FileIntegrationService;
+import com.example.geek_for_less.patterns.dependency_injection.service.FileIntegrationServiceImpl;
 
 import java.lang.reflect.Proxy;
 import java.util.HashMap;

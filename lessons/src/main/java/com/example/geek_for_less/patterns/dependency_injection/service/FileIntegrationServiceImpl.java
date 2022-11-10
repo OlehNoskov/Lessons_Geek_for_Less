@@ -1,4 +1,4 @@
-package com.example.geek_for_less.dependency_injection.service;
+package com.example.geek_for_less.patterns.dependency_injection.service;
 
 import java.io.File;
 
