@@ -1,0 +1,9 @@
+{
+  "name": "Oleg",
+  "surname": "Noskov",
+  "address": {
+    "city": "Kharkiv",
+    "street": "Sumska",
+    "buildingNumber": 10
+  }
+}
