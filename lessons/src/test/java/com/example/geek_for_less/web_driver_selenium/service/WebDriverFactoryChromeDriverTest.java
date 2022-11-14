@@ -36,7 +36,6 @@ public class WebDriverFactoryChromeDriverTest {
         WebElement firstLink = webElements.get(0);
         // Click on this element
         firstLink.click();
-        TimeUnit.SECONDS.sleep(3L);
 
         //Close this website
         webDriver.quit();
@@ -53,7 +52,6 @@ public class WebDriverFactoryChromeDriverTest {
         // Enter this link
         webDriver.get("https://google.com/");
 
-        TimeUnit.SECONDS.sleep(2L);
         // Find element on the page
         WebElement inputElement = webDriver.findElement(By.xpath(" //form//div[1]/div[2]/input"));
 
