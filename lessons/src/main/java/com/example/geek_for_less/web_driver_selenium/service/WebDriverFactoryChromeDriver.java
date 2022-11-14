@@ -18,6 +18,9 @@ public class WebDriverFactoryChromeDriver implements WebDriverFactory {
     public WebDriver create() {
         ChromeOptions chromeOptions = new ChromeOptions();
 
+        //Add arguments into  chromeOptions: It will be opened in maximum size
+        chromeOptions.addArguments("start-maximized");
+
         // First way
         // for proxy Chrome driver object example addArguments
 //        chromeOptions.addArguments("--proxy-server-<username>:<password>@<host>:<port>");

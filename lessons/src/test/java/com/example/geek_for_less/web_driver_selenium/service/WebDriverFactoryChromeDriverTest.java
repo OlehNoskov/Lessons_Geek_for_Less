@@ -47,7 +47,7 @@ public class WebDriverFactoryChromeDriverTest {
         WebDriver webDriver = webDriverFactory.create();
 
         // Chrome will be opened in maximum size
-        webDriver.manage().window().maximize();
+//        webDriver.manage().window().maximize();
 
         // Enter this link
         webDriver.get("https://google.com/");
@@ -82,7 +82,7 @@ public class WebDriverFactoryChromeDriverTest {
         WebDriverFactory webDriverFactory = new WebDriverFactoryChromeDriver();
         WebDriver webDriver = webDriverFactory.create();
 
-        webDriver.manage().window().maximize();
+//        webDriver.manage().window().maximize();
 
         // Enter this link
         webDriver.get("https://google.com/");
