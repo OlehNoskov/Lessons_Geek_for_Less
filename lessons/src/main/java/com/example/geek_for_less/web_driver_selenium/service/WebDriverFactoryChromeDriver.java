@@ -20,14 +20,15 @@ public class WebDriverFactoryChromeDriver implements WebDriverFactory {
 
         // First way
         // for proxy Chrome driver object example addArguments
-        chromeOptions.addArguments("--proxy-server-<username>:<password>@<host>:<port>");
+//        chromeOptions.addArguments("--proxy-server-<username>:<password>@<host>:<port>");
 
         // Second way
         //Map includes preferences settings for gadgets or desktop version
-        Map<String, Object> pref = new HashMap<>();
-        pref.put("deviceName", "Iphone X");
+//        Map<String, Object> pref = new HashMap<>();
+//        pref.put("deviceName", "iPhone X");
+//        pref.put("deviceSamsung", "Samsung Galaxy S20+");
         // SetExperimentalOption is working only for Google Chrome!!!
-        chromeOptions.setExperimentalOption("mobileEmulation", pref);
+//        chromeOptions.setExperimentalOption("mobileEmulation", pref);
 
         return new ChromeDriver(chromeOptions);
     }
