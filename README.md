@@ -3,3 +3,6 @@
 27.10.2022 4th Lessons: Patterns: Singleton and Builder
 31.10.2022 5th Lessons: Patterns: Proxy, Facade
 03.11.2022 6th Lessons: Pattern: Factory
+07.11.2022 7th Lessons: Maven
+10.11.2022 8th Lessons: Dependency Injection
+14.11.2022 9th Lessons: Selenium Web Driver and Jackson DataBind
