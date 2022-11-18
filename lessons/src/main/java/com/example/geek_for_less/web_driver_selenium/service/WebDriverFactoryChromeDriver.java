@@ -4,9 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class WebDriverFactoryChromeDriver implements WebDriverFactory {
 
     // Set System.setProperty for chrome driver and specify path for chromedriver.exe file
