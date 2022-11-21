@@ -1,9 +1,7 @@
 package com.example.geek_for_less.thread_pool_executor;
 
 import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedDeque;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 public class Main {
 
@@ -12,6 +10,8 @@ public class Main {
     private static final Queue<String> PROXY = new ConcurrentLinkedDeque<>();
     // Counter working threads
     private static final CountDownLatch COUNT_DOWN_LATCH = new CountDownLatch(4);
+
+    private static ExecutorService executorService = Executors.newFixedThreadPool(6);
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -36,10 +36,13 @@ public class Main {
             COUNT_DOWN_LATCH.countDown();
         };
 
-        new Thread(scenarioRun).start();
-        new Thread(proxiesRun).start();
+        executorService.execute(scenarioRun);
+        executorService.execute(proxiesRun);
 
-        int countWorkers = 2;
+//        new Thread(scenarioRun).start();
+//        new Thread(proxiesRun).start();
+
+        int countWorkers = 4;
 
         for (int a = 0; a < countWorkers; a++) {
             Runnable worker = () -> {
@@ -62,11 +65,15 @@ public class Main {
                 System.out.println(String.format("Finish Worker Thread - %s",
                         Thread.currentThread().getName()));
             };
-            new Thread(worker).start();
+
+            executorService.execute(worker);
+//            new Thread(worker).start();
         }
 
         // CountDownLatch.await() - Thread main waiting for the end work another threads
         COUNT_DOWN_LATCH.await();
+        //close threads
+        executorService.shutdown();
         System.out.println(String.format("Finish Main Thread - %s",
                 Thread.currentThread().getName()));
     }
