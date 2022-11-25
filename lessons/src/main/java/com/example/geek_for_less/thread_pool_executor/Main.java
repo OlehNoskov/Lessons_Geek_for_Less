@@ -23,7 +23,7 @@ public class Main {
                     Thread.currentThread().getName()));
 
             // Cut down counter threads, we show, that this thread finished
-            COUNT_DOWN_LATCH.countDown();
+//            COUNT_DOWN_LATCH.countDown();
         };
 
         Runnable proxiesRun = () -> {
@@ -33,7 +33,7 @@ public class Main {
             System.out.println(String.format("Finish PROXY Thread - %s,",
                     Thread.currentThread().getName()));
 
-            COUNT_DOWN_LATCH.countDown();
+//            COUNT_DOWN_LATCH.countDown();
         };
 
         executorService.execute(scenarioRun);
@@ -70,7 +70,7 @@ public class Main {
 //            new Thread(worker).start();
         }
 
-        // CountDownLatch.await() - Thread main waiting for the end work another threads
+//         CountDownLatch.await() - Thread main waiting for the end work another threads
         COUNT_DOWN_LATCH.await();
         //close threads
         executorService.shutdown();
