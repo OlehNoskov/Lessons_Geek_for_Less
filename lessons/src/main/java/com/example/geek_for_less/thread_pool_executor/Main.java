@@ -14,7 +14,6 @@ public class Main {
     private static ExecutorService executorService = Executors.newFixedThreadPool(6);
 
     public static void main(String[] args) throws InterruptedException {
-
         Runnable scenarioRun = () -> {
             for (int i = 0; i < 10; i++) {
                 SCENARIO.add("Scenario - " + i);
