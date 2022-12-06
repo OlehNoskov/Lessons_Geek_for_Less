@@ -7,7 +7,7 @@ import static org.mockito.Mockito.*;
 public class EmailServiceImplTest {
 
     @Test
-    public void happyPath(){
+    public void happyPath() {
         EmailServiceImpl emailService = new EmailServiceImpl();
         Runnable runnable1 = mock(Runnable.class);
         Runnable runnable2 = mock(Runnable.class);
