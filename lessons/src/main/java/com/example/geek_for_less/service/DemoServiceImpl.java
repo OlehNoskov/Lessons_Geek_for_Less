@@ -3,8 +3,11 @@ package com.example.geek_for_less.service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+
+import java.util.concurrent.TimeUnit;
 //import org.springframework.beans.factory.annotation.Value;
 
 
@@ -37,10 +40,16 @@ public class DemoServiceImpl implements DemoService {
     // @Scheduled(cron = "0 15 10 15 * ?")
     // https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/support/CronSequenceGenerator.html
 
+
+    @Override
+    @Async
     // @Scheduled(cron = "*/2 * * * * *")
     @Scheduled(cron = "${cron}")
-    private void testSchedule(){
-        LOGGER.info("Testing schedule!");
+    public void testSchedule() throws InterruptedException {
+    // LOGGER.info("Testing schedule!");
+        LOGGER.info(String.format("Testing schedule: %s", Thread.currentThread().getName()));
+        TimeUnit.SECONDS.sleep(4);
+        LOGGER.info(String.format("Finish  schedule: %s", Thread.currentThread().getName()));
     }
 
     public String getDemo() {
@@ -57,13 +66,5 @@ public class DemoServiceImpl implements DemoService {
 
     public void setDemo2(String demo2) {
         this.demo2 = demo2;
-    }
-
-    public String getCron() {
-        return cron;
-    }
-
-    public void setCron(String cron) {
-        this.cron = cron;
     }
 }
