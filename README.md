@@ -8,3 +8,5 @@
 14.11.2022 9th Lessons: Selenium Web Driver and Jackson DataBind
 21.11.2022 10th Lessons: Multithreading
 25.11.2022 11th Lessons: Testing void methods
+08.12.2022 12th Lessons: Migration to Spring
+15.12.2022 13th Lessons: Properties and schedule
