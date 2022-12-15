@@ -5,6 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Service;
 
 @Service
+// You need this dependency: spring-boot-configuration-processor
 // To working you have to add getters and setters for fields from properties file
 @ConfigurationProperties(prefix = "demo.test.string")
 public class DemoServiceImpl implements DemoService {
