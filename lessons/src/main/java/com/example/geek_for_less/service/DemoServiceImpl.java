@@ -1,8 +1,13 @@
 package com.example.geek_for_less.service;
 
-import org.springframework.beans.factory.annotation.Value;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+//import org.springframework.beans.factory.annotation.Value;
+
+
 
 @Service
 // You need this dependency: spring-boot-configuration-processor
@@ -14,12 +19,28 @@ public class DemoServiceImpl implements DemoService {
 //    @Value(value = "${demo.test.string:Hello!}")
 //    private String demoString;
 
+    private final Logger LOGGER =  LoggerFactory.getLogger(DemoServiceImpl.class);
     private String demo;
     private String demo2;
+    private String cron;
 
     @Override
     public String getDemoString() {
         return demo2;
+    }
+
+    // The task will be executed every second
+    // @Scheduled(cron = "1 0 0 0 * ?")
+
+    // (cron = "0(sec) 15(minutes) 10(hours) 15(days) *(month ) ?")
+    // The task will be executed at 10:15 AM on the 15th day of every month
+    // @Scheduled(cron = "0 15 10 15 * ?")
+    // https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/support/CronSequenceGenerator.html
+
+    // @Scheduled(cron = "*/2 * * * * *")
+    @Scheduled(cron = "${cron}")
+    private void testSchedule(){
+        LOGGER.info("Testing schedule!");
     }
 
     public String getDemo() {
@@ -36,5 +57,13 @@ public class DemoServiceImpl implements DemoService {
 
     public void setDemo2(String demo2) {
         this.demo2 = demo2;
+    }
+
+    public String getCron() {
+        return cron;
+    }
+
+    public void setCron(String cron) {
+        this.cron = cron;
     }
 }
