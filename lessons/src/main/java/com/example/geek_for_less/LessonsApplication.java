@@ -8,7 +8,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 // Switches on Spring's ability to run @Async methods in a background thread pool.
 @EnableAsync
 // EnableScheduling guarantees, that background tasks will be created
-@EnableScheduling
+//@EnableScheduling
 // Start SpringBootApplication
 @SpringBootApplication
 public class LessonsApplication {
